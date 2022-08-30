@@ -33,21 +33,21 @@ x.addListener(myFunction) // Attach listener function on state changes
     
 	$(document).scroll(function() {     
 		
-		let topval = $(document).scrollTop();  
+	let topval = $(document).scrollTop();  
       
-		if(topval >= heightFromTop ){ 
-		  getElement.removeClass('ftrFixedHide');  	
+	if(topval >= heightFromTop ){ 
+	  getElement.removeClass('ftrFixedHide');  	
           getElement.addClass('ftrFixed'); 
         } else {  
           getElement.removeClass('ftrFixed');  
-		  getElement.addClass('ftrFixedHide'); 
+	  getElement.addClass('ftrFixedHide'); 
         }  
 
-    });
+   });
    
-   }  
+  }  
   
-  }
+ }
 
   var x = window.matchMedia("(max-width: 480px)");
    
