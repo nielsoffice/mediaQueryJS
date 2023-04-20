@@ -57,5 +57,43 @@ x.addListener(myFunction) // Attach listener function on state changes
 
   });
 
+```
 
+Demo 2
+
+```JS
+<script>
+
+ jQuery(() => {
+
+  let doResize = window.screen.availWidth; 
+	 
+  const wSize = ( doResize >= 541 )	? doResize : false;
+	 
+  const wSizeTablet = ( doResize  = 992 ) ? doResize : false;
+	
+  const wSizeMobile = ( doResize  = 768 ) ? doResize : false;
+	 
+  const giftPosition = function(rS) {
+	  
+    if (window.matchMedia("(max-width: "+wSize+"px)").matches) {
+	
+      let elemContainer = (jQuery('#div_block-203-322').width() / 2) + 5; 
+      let eC = Math.trunc(elemContainer);
+      let _img = jQuery('#image-207-322');	  
+	  
+	  _img.css( { "margin-right" : eC+"px"} );
+	 
+     } 
+	  
+  }
+  
+  // >= 540px
+  giftPosition(wSize);
+	 
+  // giftPosition(wSize);
+	
+ });
+ 
+</script>
 ```
